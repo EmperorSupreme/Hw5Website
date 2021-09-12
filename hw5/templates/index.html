@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <h1>Favorite Shows!</h1>  
+        <ol>
+            <!-- For loop logic of jinja template -->
+            {%for i in range(0, len)%}
+                {%if favorite[i] == 'One Piece' %}
+                <div class= "row">
+                    <li class="fav">{{favorite[i]}}</li>
+                    <img src= {{Images[i]}}/>
+
+                </div>
+
+                
+
+                {% else %}
+                <div class = "row">
+                <li>{{favorite[i]}}</li>
+                <img src= {{Images[i]}}/>
+            </div>
+
+                
+            {%endif%}
+            {%endfor%}
+              
+            </ol>
+
+    </body>
+</html>
